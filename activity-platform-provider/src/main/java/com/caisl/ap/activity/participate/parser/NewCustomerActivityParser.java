@@ -43,6 +43,8 @@ public class NewCustomerActivityParser extends AbstractActivityPartDTOParser<New
     protected ActivityConfigDO queryDB(NewCustomerPartRequest request) {
         LogUtil.log(ActivityLoggerFactory.BUSINESS, ActivityLoggerMarker.BUSINESS, Level.INFO, "do queryDB");
         //MOCK 模拟数据，跑通流程
+
+
         ActivityConfigDO activityConfigDO = new ActivityConfigDO();
         activityConfigDO.setStatus(PresellActivityStatusEnum.PROCESSING.getCode());
         activityConfigDO.setEndTime(System.currentTimeMillis() + 24*60*60*1000);
